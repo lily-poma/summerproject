@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reusable Color Boxes</title>
+  <!--You must link to these css files-->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="color-swatch.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Example usage: just set data attributes -->
+    <div class="color-box"
+         data-hex="#FF2400"
+         data-rgb="255, 36, 0"
+         data-hsv="9°, 100%, 100%"
+         data-title="Scarlet Red">
+    </div>
+
+    <div class="color-box"
+         data-hex="#F1E5AC"
+         data-rgb="241, 229, 172"
+         data-hsv="50°, 29%, 95%"
+         data-title="Pale Wheat">
+    </div>
+  </div>
+</body>
+
+<!--You must link to this javascript file BELOW THE BODY-->
+<script src="color-swatch.js"></script> 
+
+</html>
