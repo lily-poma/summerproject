@@ -10,8 +10,9 @@
   <title>Design Inspiration Hub</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body onload="initJavascript()">
   <header>
+    <div style="padding-top: 100px;"></div>
     <nav class="navbar">
       <h1 class="logo">InspoHub</h1>
       <ul class="nav-links">
@@ -22,7 +23,7 @@
         <li><a href="color-theory.html">Color Theory</a></li>
         <li><a href="layout.html">Layout</a></li>
       </ul>
-      <button id="theme-toggle" aria-label="Toggle light/dark mode">🌙</button>
+      <button id="theme-toggle" onclick="themeToggle()" aria-label="Toggle light/dark mode">🌞</button>
     </nav>
   </header>
 

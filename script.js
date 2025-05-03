@@ -1,19 +1,23 @@
-// Theme Toggle
-const toggleBtn = document.getElementById('theme-toggle');
 const rootElement = document.documentElement;
-const currentTheme = localStorage.getItem('theme');
 
-// Apply saved theme on load
-if (currentTheme) {
+function initJavascript() {
+  console.log("Javascript loaded");
+  const currentTheme = localStorage.getItem('theme');
   rootElement.setAttribute('data-theme', currentTheme);
-  toggleBtn.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+  document.getElementById("theme-toggle").innerHTML = currentTheme === 'dark' ? '🌜' : '🌞';
 }
 
-// Toggle light/dark mode
-toggleBtn.addEventListener('click', () => {
+// Theme Toggle
+
+
+//rootElement.setAttribute('data-theme', currentTheme);
+
+function themeToggle() {
+  console.log('Toggle Theme Button Pressed');
   const isDark = rootElement.getAttribute('data-theme') === 'dark';
   const newTheme = isDark ? 'light' : 'dark';
   rootElement.setAttribute('data-theme', newTheme);
   localStorage.setItem('theme', newTheme);
-  toggleBtn.textContent = newTheme === 'dark' ? '☀️' : '🌙';
-});
+  //toggleBtn.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+  document.getElementById("theme-toggle").innerHTML = newTheme === 'dark' ? '🌜' : '🌞';
+}
