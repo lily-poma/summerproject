@@ -4,11 +4,13 @@
 
 /* Color Theme Variables */
 :root {
+  /* variables */
   --inkwell: #2c3639;
   --lunar: #3f4e4f;
   --brulee: #a27b5b;
   --au-lait: #dcd7c9;
 
+  /* light mood colors  */
   --bg-light: var(--au-lait);
   --text-light: var(--inkwell);
   --navbar-light: var(--brulee);
@@ -16,6 +18,7 @@
   --card-light: rgba(0, 0, 0, 0.05);
   --footer-light: var(--brulee);
 
+  /* dark mood colors */
   --bg-dark: var(--inkwell);
   --text-dark: var(--au-lait);
   --navbar-dark: #1a1f20;
