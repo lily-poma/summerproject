@@ -3,7 +3,12 @@ const rootElement = document.documentElement;
 function initJavascript() {
   console.log("Javascript loaded");
   const currentTheme = localStorage.getItem('theme');
-  rootElement.setAttribute('data-theme', currentTheme);
+  if (currentTheme == null) {
+    rootElement.setAttribute('data-theme', "light");
+  } else {
+    rootElement.setAttribute('data-theme', currentTheme);
+  }
+  
   document.getElementById("theme-toggle").innerHTML = currentTheme === 'dark' ? '🌜' : '🌞';
 }
 
