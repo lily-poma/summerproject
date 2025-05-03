@@ -1,13 +1,9 @@
-<!-- index.html -->
-<script src="script.js"></script> 
-
-
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Design Inspiration Hub</title>
+  <title>Layout Inspiration</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -20,22 +16,36 @@
         <li><a href="motion-design.html">Motion Design</a></li>
         <li><a href="typography.html">Typography</a></li>
         <li><a href="color-theory.html">Color Theory</a></li>
-        <li><a href="layout.html">Layout</a></li>
+        <li><a href="layout.html" class="active">Layout</a></li>
       </ul>
       <button id="theme-toggle" aria-label="Toggle light/dark mode">🌙</button>
     </nav>
   </header>
 
   <main>
-    <section class="hero">
-      <h2>Welcome to Your Design Inspiration Hub</h2>
-      <p>Curated ideas, styles, and visuals to spark your creativity in graphic and motion design.</p>
-      <img src="assets/placeholder-hero.jpg" alt="Inspiration Preview" />
+    <section class="page-header">
+      <h2>Layout Inspiration</h2>
+      <p>Discover structured compositions, asymmetry, whitespace, and balance in modern design.</p>
+    </section>
+
+    <section class="gallery">
+      <div class="gallery-item">
+        <img src="assets/layout1.jpg" alt="Layout Example 1">
+        <p>Grid-Based Layout</p>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/layout2.jpg" alt="Layout Example 2">
+        <p>Editorial Spread</p>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/layout3.jpg" alt="Layout Example 3">
+        <p>Asymmetric Composition</p>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 Bugged Out. All rights reserved.</p>
+    <p>© 2025 Your Name. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
