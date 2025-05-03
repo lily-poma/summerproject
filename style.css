@@ -141,6 +141,11 @@ h1, h2, h3, h4 {
   box-shadow: var(--shadow);
 } 
 
+.hero video {
+  margin-top: 2rem;
+}
+
+
 
 
 /* Gallery Section */
