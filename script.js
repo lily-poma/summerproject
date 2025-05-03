@@ -10,6 +10,7 @@ function initJavascript() {
 // Theme Toggle
 
 
+
 //rootElement.setAttribute('data-theme', currentTheme);
 
 function themeToggle() {
