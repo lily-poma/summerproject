@@ -1,140 +1,165 @@
-/* Root Theme Variables */
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Avenir&display=swap');
+@font-face {
+  font-family: 'Glamor';
+  src: url('fonts/Glamor-Regular.otf') format('opentype'); /* Replace with actual path if needed */
+}
+
+/* Color Theme Variables */
 :root {
-    --cream: #F9F4EA;
-    --tan: #CDAD85;
-    --rust: #C47457;
-    --olive: #9C9E80;
-    --bg-light: var(--cream);
-    --text-light: #222;
-    --bg-dark: #1e1e1e;
-    --text-dark: #eee;
-  
-    --transition-speed: 0.3s;
-    --shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Light & Dark Themes */
-  [data-theme="light"] {
-    --bg: var(--bg-light);
-    --text: var(--text-light);
-  }
-  [data-theme="dark"] {
-    --bg: var(--bg-dark);
-    --text: var(--text-dark);
-  }
-  
-  /* Base Styles */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Helvetica Neue', sans-serif;
-    background-color: var(--bg);
-    color: var(--text);
-    transition: background-color var(--transition-speed), color var(--transition-speed);
-    line-height: 1.6;
-  }
-  
-  img {
-    max-width: 100%;
-    border-radius: 10px;
-  }
-  
-  /* Navbar */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: var(--tan);
-    box-shadow: var(--shadow);
-  }
-  
-  .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #fff;
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .nav-links li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    position: relative;
-    transition: color var(--transition-speed);
-  }
-  
-  .nav-links li a:hover,
-  .nav-links li a.active {
-    color: var(--rust);
-  }
-  
-  /* Theme Toggle Button */
-  #theme-toggle {
-    font-size: 1.2rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #fff;
-  }
-  
-  /* Hero / Page Header */
-  .hero, .page-header {
-    padding: 4rem 2rem;
-    text-align: center;
-    background-color: var(--olive);
-    color: #fff;
-    transition: background-color var(--transition-speed);
-  }
-  
-  .hero img {
-    margin-top: 2rem;
-    max-width: 600px;
-    width: 100%;
-  }
-  
-  /* Gallery Section */
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    padding: 3rem 2rem;
-  }
-  
-  .gallery-item {
-    background-color: rgba(255, 255, 255, 0.05);
-    padding: 1rem;
-    border-radius: 12px;
-    box-shadow: var(--shadow);
-    transition: transform 0.3s ease;
-  }
-  
-  .gallery-item:hover {
-    transform: translateY(-5px);
-  }
-  
-  .gallery-item p {
-    margin-top: 0.5rem;
-    font-weight: 500;
-    text-align: center;
-  }
-  
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 1.5rem;
-    font-size: 0.9rem;
-    background-color: var(--tan);
-    color: #fff;
-    margin-top: 2rem;
-  }
-  
+  --inkwell: #2c3639;
+  --lunar: #3f4e4f;
+  --brulee: #a27b5b;
+  --au-lait: #dcd7c9;
+
+  --bg-light: var(--au-lait);
+  --text-light: var(--inkwell);
+  --navbar-light: var(--brulee);
+  --section-light: var(--lunar);
+  --card-light: rgba(0, 0, 0, 0.05);
+  --footer-light: var(--brulee);
+
+  --bg-dark: var(--inkwell);
+  --text-dark: var(--au-lait);
+  --navbar-dark: #1a1f20;
+  --section-dark: #2b3234;
+  --card-dark: rgba(255, 255, 255, 0.05);
+  --footer-dark: #1a1f20;
+
+  --transition-speed: 0.3s;
+  --shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Light/Dark Modes */
+[data-theme="light"] {
+  --bg: var(--bg-light);
+  --text: var(--text-light);
+  --navbar-bg: var(--navbar-light);
+  --section-bg: var(--section-light);
+  --card-bg: var(--card-light);
+  --footer-bg: var(--footer-light);
+}
+
+[data-theme="dark"] {
+  --bg: var(--bg-dark);
+  --text: var(--text-dark);
+  --navbar-bg: var(--navbar-dark);
+  --section-bg: var(--section-dark);
+  --card-bg: var(--card-dark);
+  --footer-bg: var(--footer-dark);
+}
+
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Avenir', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Glamor', serif;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--navbar-bg);
+  box-shadow: var(--shadow);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  font-family: 'Glamor', serif;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition-speed);
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: var(--au-lait);
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Hero / Page Header */
+.hero, .page-header {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: var(--section-bg);
+  color: #fff;
+  transition: background-color var(--transition-speed);
+}
+
+.hero img {
+  margin-top: 2rem;
+  max-width: 600px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Gallery Section */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 3rem 2rem;
+}
+
+.gallery-item {
+  background-color: var(--card-bg);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+}
+
+.gallery-item p {
+  margin-top: 0.5rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  background-color: var(--footer-bg);
+  color: #fff;
+  margin-top: 2rem;
+}
