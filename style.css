@@ -1,9 +1,6 @@
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Avenir&display=swap');
-@font-face {
-  font-family: 'Glamor';
-  src: url('fonts/Glamor-Regular.otf') format('opentype'); /* Replace with actual path if needed */
-}
+@import url('https://fonts.googleapis.com/css2?family=Faustina:wght@400;600&family=Karla:wght@400;700&display=swap'); 
+
 
 /* Color Theme Variables */
 :root {
@@ -57,7 +54,7 @@
 }
 
 body {
-  font-family: 'Avenir', sans-serif;
+  font-family: 'Karla', sans-serif;
   background-color: var(--bg);
   color: var(--text);
   transition: background-color var(--transition-speed), color var(--transition-speed);
@@ -65,7 +62,7 @@ body {
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Glamor', serif;
+  font-family: 'Faustina', serif; 
 }
 
 /* Navbar */
